@@ -22,5 +22,6 @@ import { infoControllers } from "./info";
   const port = config.PORT;
   app.listen(port, () => {
     Logger.info(`listening on port ${port}`);
+    Logger.info('Server Initiated')
   });
 })();
