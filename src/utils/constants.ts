@@ -1,9 +1,4 @@
-export const FIXED_DATA = {
-  starship: {
-    name: "TIE Advanced x1",
-    class: "Starfighter",
-    model: "Twin Ion Engine Advanced x1",
-  },
-  crew: "1",
-  isLeiaOnPlanet: true,
-};
+export const SWAPI_API = 'https://swapi.dev/api/';
+export const DARTH_VADER_ID = 'people/4'
+export const ALDERAAN_ID = 'planets/2'
+export const LEIA = 'Leia Organa'

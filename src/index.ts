@@ -3,7 +3,7 @@ import config from "./config";
 import cors from "cors";
 import helmet from "helmet";
 import { Logger } from "./utils";
-import { FIXED_DATA } from "./utils/constants";
+import { infoControllers } from "./info";
 
 (async () => {
   const app = express();
@@ -14,12 +14,10 @@ import { FIXED_DATA } from "./utils/constants";
     .use(express.urlencoded({ extended: true }));
 
   app.get("/", (req, res) => {
-    res.send("<h1>Welcome to 2nd round of Chainwhiz</h1>");
+    res.send("Welcome to 2nd round of Chainwhiz");
   });
 
-  app.get("/information", (req, res) => {
-    res.send(FIXED_DATA);
-  });
+  app.use("/api", infoControllers());
 
   const port = config.PORT;
   app.listen(port, () => {
